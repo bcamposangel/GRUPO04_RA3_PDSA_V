@@ -1,5 +1,6 @@
 package Main;
 
+import gui.SistemaGUI;
 import model.*;
 import patrones.adapter.AdaptadorYape;
 import patrones.adapter.ProcesadorPago;
@@ -20,7 +21,6 @@ import patrones.strategy.PagoTarjeta;
 import patrones.strategy.PagoYape;
 
 import javax.swing.*;
-import patrones.observer.VentaObserverGUI;
 
 
 public class Main {
@@ -184,9 +184,8 @@ public class Main {
         contexto.procesarPago(venta.getTotal());
 
         // Lanzar GUI del Observer
-        System.out.println("\n===== 10. PATRÓN OBSERVER CON GUI =====");
-        SwingUtilities.invokeLater(() -> new VentaObserverGUI().setVisible(true));
-
+        System.out.println("\n===== INTERFAZ GRAFICA CON LOS PATRONES DEL RA3 =====");
+        SwingUtilities.invokeLater(() -> new SistemaGUI().setVisible(true));
     }
 
 
